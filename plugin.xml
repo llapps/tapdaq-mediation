@@ -22,10 +22,11 @@
     <js-module src="www/Promise.js" name="Promise" />
 
     <platform name="android">                
-        <framework src="com.google.code.gson:gson:2.4" />   
-        <framework src="com.android.support:appcompat-v7:27.0.2" />            
-        <framework src="com.google.android.gms:play-services-basement:11.8.0" />     
-        <framework src="com.google.android.gms:play-services-ads:11.8.0" />
+        <framework src="com.tapdaq.sdk:Tapdaq-BaseSDK:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqAdMobAdapter:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqFANAdapter:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqUnityAdsAdapter:7.4.1" />
+        
                
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
 
@@ -71,11 +72,7 @@
         <source-file src="src/android/listeners/NativeAdListener.java" target-dir="src/com/tapdaq/cordovasdk/listeners"/>
         <source-file src="src/android/enums/AdType.java" target-dir="src/com/tapdaq/cordovasdk/enums"/>           
  
-        <framework src="com.tapdaq.sdk:Tapdaq-BaseSDK:7.4.1" />
-        <framework src="com.tapdaq.sdk:TapdaqAdMobAdapter:7.4.1" />
-        <framework src="com.tapdaq.sdk:TapdaqFANAdapter:7.4.1" />
-        <framework src="com.tapdaq.sdk:TapdaqUnityAdsAdapter:7.4.1" />
-        
+
     </platform>
 
 </plugin>
