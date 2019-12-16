@@ -1,5 +1,9 @@
 repositories {
-
+	google()
+    jcenter()
+  
+    //Tapdaq SDK and Adapters
+    maven { url "http://android-sdk.tapdaq.com" }
 }
 
 android {
