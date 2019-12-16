@@ -21,14 +21,16 @@
     <js-module src="www/vendor/promise.js" name="vendor.promise" />
     <js-module src="www/Promise.js" name="Promise" />
 
-    <platform name="android">                
+    <platform name="android">  
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
+            
         <framework src="com.tapdaq.sdk:Tapdaq-BaseSDK:7.4.1" />
         <framework src="com.tapdaq.sdk:TapdaqAdMobAdapter:7.4.1" />
         <framework src="com.tapdaq.sdk:TapdaqFANAdapter:7.4.1" />
         <framework src="com.tapdaq.sdk:TapdaqUnityAdsAdapter:7.4.1" />
         
                
-        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
+
 
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="Tapdaq">
