@@ -3,9 +3,9 @@ package com.tapdaq.cordovasdk.listeners;
 import android.app.Activity;
 
 import com.tapdaq.cordovasdk.TapdaqHelper;
-import com.tapdaq.sdk.CreativeType;
-import com.tapdaq.sdk.TMNativeAd;
-import com.tapdaq.sdk.Tapdaq;
+import com.tapdaq.sdk.*;
+import com.tapdaq.sdk.common.*;
+import com.tapdaq.sdk.listeners.*;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.LOG;
 import org.json.JSONException;
