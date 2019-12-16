@@ -1,8 +1,8 @@
 package com.tapdaq.cordovasdk.listeners;
 
-import com.tapdaq.sdk.common.TMAdError;
-import com.tapdaq.sdk.listeners.TMAdListener;
-import com.tapdaq.sdk.moreapps.TMMoreAppsListener;
+import com.tapdaq.sdk.*;
+import com.tapdaq.sdk.common.*;
+import com.tapdaq.sdk.listeners.*;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
