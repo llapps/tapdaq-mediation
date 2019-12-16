@@ -19,7 +19,7 @@
     <js-module src="www/ads/NativeAd.js" name="ads.NativeAd" />
     <js-module src="www/EventsBus.js" name="EventsBus" />
     <js-module src="www/vendor/promise.js" name="vendor.promise" />
-    <js-module src="www/promise.js" name="Promise" />
+    <js-module src="www/Promise.js" name="Promise" />
 
     <platform name="android">                
         <framework src="com.google.code.gson:gson:2.4" />   
