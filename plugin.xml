@@ -27,9 +27,6 @@
         <framework src="com.google.android.gms:play-services-basement:11.8.0" />     
         <framework src="com.google.android.gms:play-services-ads:11.8.0" />
                
-        <hook type="before_compile" src="hooks/updateMultidexManifest.js" />
-        <hook type="after_platform_add" src="hooks/updateMultidexManifest.js" />
-
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
 
         <config-file parent="/*" target="res/xml/config.xml">
@@ -57,13 +54,27 @@
         
 
         </config-file>
+            
+            <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <!-- <application 
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:replace="android:appComponentFactory" /> -->
+             <meta-data android:name="applovin.sdk.key" android:value="U9RgZxLdKFGcd0hiXuS_flFpUfmZIA07uzllTXVILGRtKXeV4-wzsTKIlkTnIBg94UnxHtrqGzDx5bVwMmvVuM" />
+            <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-6681943608991578~3835909604" />
+            <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+            <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+       </config-file>
+            
         <source-file src="src/android/CDVTapdaq.java" target-dir="src/com/tapdaq/cordovasdk"/>
         <source-file src="src/android/TapdaqHelper.java" target-dir="src/com/tapdaq/cordovasdk"/>
         <source-file src="src/android/listeners/AdListener.java" target-dir="src/com/tapdaq/cordovasdk/listeners"/>
         <source-file src="src/android/listeners/NativeAdListener.java" target-dir="src/com/tapdaq/cordovasdk/listeners"/>
         <source-file src="src/android/enums/AdType.java" target-dir="src/com/tapdaq/cordovasdk/enums"/>           
-        
-        <source-file src="src/android/libs/tapdaq.jar" target-dir="libs" />       
+ 
+        <framework src="com.tapdaq.sdk:Tapdaq-BaseSDK:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqAdMobAdapter:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqFANAdapter:7.4.1" />
+        <framework src="com.tapdaq.sdk:TapdaqUnityAdsAdapter:7.4.1" />
         
     </platform>
 
